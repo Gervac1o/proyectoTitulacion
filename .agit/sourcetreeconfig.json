@@ -1,0 +1,32 @@
+{
+  "$id": "19",
+  "AutoRefresh": true,
+  "AutoRefreshRemotes": true,
+  "CommitTextLinks": null,
+  "DraftCommitMsg": "",
+  "IncomingSavedCount": 1,
+  "LastCheckedRemotes": "2021-06-10T00:06:33.969593-05:00",
+  "LastUsedView": 0,
+  "LogBranchFilterIndex": 0,
+  "OutgoingSavedCount": 0,
+  "SidebarExpandedItems": [
+    "Branches"
+  ],
+  "SidebarWidth": 210.0,
+  "SubtreeLinks": [],
+  "RemoteProjectLinks": [
+    {
+      "$id": "20",
+      "BaseUrl": "https://github.com",
+      "Identifier": "Gervac1o/ProyectoFinal",
+      "RemoteName": "origin",
+      "Type": 0,
+      "Username": "ErickRosasMendoza",
+      "CloneUrl": null,
+      "ProjectUrl": null,
+      "AccountId": "ErickRosasMendoza@github.com",
+      "AvatarUrl": null,
+      "DisplayName": "origin: https://github.com"
+    }
+  ]
+}
