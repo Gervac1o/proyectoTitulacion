@@ -269,7 +269,7 @@ class AdminBajaArchivos extends React.Component {
                                     <br />
                                 </div>
                                 <br />
-                               {/**  <button id="btn_deleteRegistro" onClick={this.deleteDictamen}>Borrar Registro</button>*/}
+                               <button id="btn_deleteRegistro" onClick={this.deleteDictamen}>Borrar Registro</button>
                             </div>
                             </div>
                         </div>{/**fincontenedor */}
