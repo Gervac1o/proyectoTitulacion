@@ -66,9 +66,9 @@ public class Alumno implements Serializable{
 		this.idUsuario=idUsuario;
 	
 }
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="id_usuario",insertable=false, updatable = false)
-	private Usuario usuario;
+	//@ManyToOne(fetch=FetchType.LAZY)
+	//@JoinColumn(name="id_usuario",insertable=false, updatable = false)
+	//private Usuario usuario;
 
 
 
@@ -120,12 +120,12 @@ public class Alumno implements Serializable{
 	public void setIdUsuario(Long idUsuario) {
 		this.idUsuario = idUsuario;
 	}
-	public Usuario getUsuario() {
+/*	public Usuario getUsuario() {
 		return usuario;
 	}
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
-
+*/
 	
 }
