@@ -57,11 +57,11 @@ public class Usuario implements Serializable{
 		this.status = status;
 		
 	}
-	
+	/*
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     @JoinColumn(name = "id_alumno")
 	private Alumno alumno;
-	
+	*/
 	public Long getIdUsuario() {
 		return idUsuario;
 	}
