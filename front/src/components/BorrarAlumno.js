@@ -16,7 +16,7 @@ class BorrarAlumno extends React.Component {
 
 
         delete = () => {
-            axios.delete("alumno/delete/" + this.state.idAlumno)
+            axios.delete("usuario/delete/" + this.state.idAlumno)
             .then(res => {
                 this.setState({
                     statusLista: "true"

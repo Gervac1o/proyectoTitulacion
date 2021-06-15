@@ -6,6 +6,7 @@ import DirectorioAlumno from './DirectorioAlumno';
 import Cookies from 'universal-cookie';
 import DatosActualizadosAlumno from './DatosActualizadosAlumno';
 import DatosActualizadosEmail from './DatosActualizadosEmail';
+import BorrarAlumno from './BorrarAlumno';
 
 const cookies = new Cookies();
 
@@ -132,6 +133,9 @@ class MisDatosAlumno extends React.Component {
                             break;
                     }
                 })()}
+                <BorrarAlumno
+                id={this.state.idUsuario}
+                />
             </div>
         );
     }//Fin de Render ()
