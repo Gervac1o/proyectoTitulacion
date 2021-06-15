@@ -70,8 +70,6 @@ public class Alumno implements Serializable{
 	@JoinColumn(name="id_usuario",insertable=false, updatable = false)
 	private Usuario usuario;
 
-
-
 	public Long getIdAlumno() {
 		return idAlumno;
 	}
