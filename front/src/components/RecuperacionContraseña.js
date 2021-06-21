@@ -25,7 +25,7 @@ class RecuperacionContraseña extends React.Component{
                 idUsuario: this.props.id,
                
                 email: this.state.alumno.email,
-                password: "p4S"+this.props.id+"dEYAe",
+                password: "p4S"+this.props.id+"dE",
                 
             }
         });
@@ -120,7 +120,7 @@ class RecuperacionContraseña extends React.Component{
                                                 })()}<br/>
                                                 <strong>Email:</strong> {this.state.alumno.email}
                                                 <br/> <br/>
-                                                <strong>Nueva Contraseña:</strong> p4S{this.props.id}dEYAe
+                                                <strong>Nueva Contraseña:</strong> p4S{this.props.id}dE
 
                                                 <br/><br/>
                                                 

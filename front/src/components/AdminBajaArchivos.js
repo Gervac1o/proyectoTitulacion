@@ -265,7 +265,7 @@ class AdminBajaArchivos extends React.Component {
                                         <option value="FINALIZADO">FINALIZADO</option>
                                         <option value="RECHAZADO">RECHAZADO</option>
                                     </select>
-                                    <button className="btn_join" onClick={this.cambiarEstado}>Actualizar</button>
+                                   {/* <button className="btn_join" onClick={this.cambiarEstado}>Actualizar</button>*/}
                                     <br />
                                 </div>
                                 <br />
@@ -287,7 +287,7 @@ class AdminBajaArchivos extends React.Component {
                                                 <td className="table_lista">{lista1.nombreDoc}</td>
                                                 <td className="table_lista">{lista1.comentario}</td>
                                                 <td><Link to={"/doc/PdfBaja/" + lista1.idDoc}target="_blank" id="btn_watch">Visualizar</Link></td>
-                                                <td><a  href={ "http://localhost:8080/docBaja/getDoc/" + lista1.idDoc} download  id="btn_downLoad">Descargar</a></td>
+                                                <td><a  href={ "/docBaja/getDoc/" + lista1.idDoc} download  id="btn_downLoad">Descargar</a></td>
 
                                                 <td><BorrarDoc
                                                 idLista={lista1.idLista}

@@ -53,8 +53,8 @@ render() {
                         <td className="table_lista">{alumno.boleta}</td> 
                         <td className="table_lista">{alumno.programaAcademico}</td>
                         <td><Link to={'/admin/DirectorioArchivosAlumno/' + alumno.idAlumno} id="btn_watch">Ver Archivos</Link></td>
-                        <td><BorrarAlumno
-                        id = {alumno.idAlumno}/></td>
+                     {/*   <td><BorrarAlumno
+                        id = {alumno.idAlumno}/></td> */}
                     </tr>
                 </tbody>
                 )
@@ -65,7 +65,7 @@ render() {
         return(
             <div className="center">
             <DirectorioAdmin />
-                <h1>No hay alumnos registrados para esta solicitud</h1>
+                <h1>No hay alumnos registrados</h1>
             </div>
         );
     }else{
