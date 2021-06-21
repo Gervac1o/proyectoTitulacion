@@ -28,10 +28,10 @@ class PdfBajaAlumno extends React.Component{
                console.log(this.state.alumno.nombre)
             })
             .then(res => {
-                axios.get("user/dictamen/findIdAlumno/" + this.props.idAlumno)
+                axios.get("solicitudBaja/findIdAlumno/" + this.props.idAlumno)
                 this.setState({
                     tipoBaja: res.data
-            })
+                })
             })
             .then(res =>{
                 this.setState({
