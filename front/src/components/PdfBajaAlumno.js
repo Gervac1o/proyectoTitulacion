@@ -10,6 +10,7 @@ class PdfBajaAlumno extends React.Component{
       
         state={
             alumno: {},
+            tipoBaja: {},
             text:"",
             text2:""
         }
@@ -26,6 +27,12 @@ class PdfBajaAlumno extends React.Component{
                 })
                console.log(this.state.alumno.nombre)
             })
+            .then(res => {
+                axios.get("user/dictamen/findIdAlumno/" + this.props.idAlumno)
+                this.setState({
+                    tipoBaja: res.data
+            })
+            })
             .then(res =>{
                 this.setState({
                  text: ["Por este medio, el C." + this.state.alumno.nombre + " " + this.state.alumno.apellidoPaterno + " " + this.state.alumno.apellidoMaterno + " con número de boleta: " + this.state.alumno.boleta + 
@@ -35,9 +42,9 @@ class PdfBajaAlumno extends React.Component{
             .then(res =>{
                 this.setState({
                     text2:[
-                        "Solicito de la manera mas atenta su autorización para tramitar la " + this.props.baja + " ("+ this.props.horas +" Horas) " +
-               "de mi servicio social por motivos personales, el cual se lleva a cabo con el prestatario: " + this.props.prestatario + ", en el programa: " + this.props.programaSS + ", durante el periodo del " +
-            this.props.fechaInicio + " al " + this.props.fechaTermino + ", con número de registro: " + this.props.registroSS + "."]
+                        "Solicito de la manera mas atenta su autorización para tramitar la " + this.state.tipoBaja.tipoDeBaja + " ("+ this.state.tipoBaja.horas +" Horas) " +
+               "de mi servicio social por motivos personales, el cual se lleva a cabo con el prestatario: " + this.state.tipoBaja.prestatario + ", en el programa: " + this.state.tipoBaja.programaSS + ", durante el periodo del " +
+               this.state.tipoBaja.fechaInicio + " al " + this.state.tipoBaja.fechaTermino + ", con número de registro: " + this.state.tipoBaja.registroSS + "."]
                 })
             })
            
