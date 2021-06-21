@@ -27,18 +27,17 @@ class PdfBajaAlumno extends React.Component{
                 })
                console.log(this.state.alumno.nombre)
             })
-            .then(res => {
-                axios.get("solicitudBaja/findIdAlumno/" + this.props.idAlumno)
-                this.setState({
-                    tipoBaja: res.data
-                })
-            })
             .then(res =>{
                 this.setState({
                  text: ["Por este medio, el C." + this.state.alumno.nombre + " " + this.state.alumno.apellidoPaterno + " " + this.state.alumno.apellidoMaterno + " con número de boleta: " + this.state.alumno.boleta + 
-                 "," + this.props.redaccion + "del programa acedémico de " + this.state.alumno.programaAcademico + ", de la Unidad Académica ESIME Zacatenco."]
+                 "," + this.props.redaccion + "del programa acedémico de " + this.state.alumno.programaAcademico + ", de la Unidad Académica ESIME Zacatenco."],
+                 text2:[
+                    "Solicito de la manera mas atenta su autorización para tramitar la " + this.props.tipoDeBaja + " ("+ this.props.horas +" Horas) " +
+                    "de mi servicio social por motivos personales, el cual se lleva a cabo con el prestatario: " + this.props.prestatario + ", en el programa: " + this.props.programaSS + ", durante el periodo del " +
+                    this.props.fechaInicio + " al " + this.props.fechaTermino + ", con número de registro: " + this.props.registroSS + "."]
                 })
             })
+            /* 
             .then(res =>{
                 this.setState({
                     text2:[
@@ -47,6 +46,7 @@ class PdfBajaAlumno extends React.Component{
                this.state.tipoBaja.fechaInicio + " al " + this.state.tipoBaja.fechaTermino + ", con número de registro: " + this.state.tipoBaja.registroSS + "."]
                 })
             })
+            */
            
            //hacer todo mayusculas
            //var luis = this.state.nombre;
