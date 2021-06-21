@@ -33,7 +33,7 @@ class VerDatosBaja extends React.Component{
         
     render() {
         if(this.state.tipoBaja ){
-            if(this.state.tipoBaja.egresado == "False"){
+            if(this.state.tipoBaja.egresado === false){
                 return(
                     <div className="center">
                             <div id="sidebar" className="bajaCenter">
