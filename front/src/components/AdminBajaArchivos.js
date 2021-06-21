@@ -265,11 +265,11 @@ class AdminBajaArchivos extends React.Component {
                                         <option value="FINALIZADO">FINALIZADO</option>
                                         <option value="RECHAZADO">RECHAZADO</option>
                                     </select>
-                                   {/* <button className="btn_join" onClick={this.cambiarEstado}>Actualizar</button>*/}
+                                    <button className="btn_join" onClick={this.cambiarEstado}>Actualizar</button>
                                     <br />
                                 </div>
                                 <br />
-                               <button id="btn_deleteRegistro" onClick={this.deleteDictamen}>Borrar Registro</button>
+                           {/* <button id="btn_deleteRegistro" onClick={this.deleteDictamen}>Borrar Registro</button> */}
                             </div>
                             </div>
                         </div>{/**fincontenedor */}

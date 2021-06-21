@@ -276,8 +276,9 @@ class Baja extends React.Component {
                             <div>
                                 <label htmlFor="egresado" className="text_login">Eres egresado?</label>
                                 <select name="egresado" className="input_login" ref={this.egresadoRef} onChange={this.changeState}>
-                                    <option value="True">SI, SI SOY EGRESADO</option>
+                                    <option label="" ></option>
                                     <option value="False">NO, NO SOY EGRESADO</option>
+                                    <option value="True">SI, SI SOY EGRESADO</option>
                                     </select>
                             </div>
                             <div>

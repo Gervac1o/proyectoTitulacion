@@ -92,12 +92,12 @@ class MisDatosAdmin extends React.Component{
                             <tr>
                             <td className="table_lista"><button  className="btn" id= "btn-table"onClick={this.updateEmail} >Cambiar Contraseña</button></td>
                             </tr>
-                            <tr>
+                        {/* <tr>
                             <td className="table_lista"><button   className="btn" id= "btn-table"onClick={this.recuperarContraseña} >Restablecer contraseña de Administrador</button></td>
                             </tr>
                             <tr>
                             <td className="table_lista"><button   className="btn" id= "btn-table"onClick={this.recuperarContraseña} >Eliminar cuenta</button></td>
-                            </tr>
+                            </tr>*/}
                         </tr>
                     </tbody>
                         {(() => {  

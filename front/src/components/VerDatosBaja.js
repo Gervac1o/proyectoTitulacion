@@ -33,7 +33,7 @@ class VerDatosBaja extends React.Component{
         
     render() {
         if(this.state.tipoBaja ){
-            if(this.state.tipoBaja.egresado == "false"){
+            if(this.state.tipoBaja.egresado == "False"){
                 return(
                     <div className="center">
                             <div id="sidebar" className="bajaCenter">
@@ -166,7 +166,7 @@ class VerDatosBaja extends React.Component{
                                     <strong>Registro de Servicio Social:</strong> {this.state.tipoBaja.registroSS}
                                 </div>
                                 <div>
-                                    <strong>Programa de ServicioSocial:</strong> {this.state.tipoBaja.programaSS}
+                                    <strong>Programa de Servicio Social:</strong> {this.state.tipoBaja.programaSS}
                                 </div>
                                 <div>
                                     <strong>Prestatario:</strong> {this.state.tipoBaja.prestatario}
