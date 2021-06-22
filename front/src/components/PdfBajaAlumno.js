@@ -73,7 +73,7 @@ class PdfBajaAlumno extends React.Component{
         "de mi servicio social por motivos personales, el cual se lleva a cabo con el prestatario: " + this.props.prestatario + ", en el programa: " + this.props.programaSS + ", durante el periodo del " +
         this.props.fechaInicio + " al " + this.props.fechaTermino + ", con número de registro: " + this.props.registroSS + ".", 50,380 , {maxWidth: 500, align: "justify"});
         //doc.text(this.state.text2, 50,380 , {maxWidth: 500, align: "justify"});
-        doc.text("Sin otro en particular, aprovecho para mandar un cordial saludo.", 50, 460 , {maxWidth: 500, align: "justify"});
+        doc.text("Sin otro en particular, aprovecho para mandar un cordial saludo.", 50, 480 , {maxWidth: 500, align: "justify"});
 
         doc.text("ATENTAMENTE", 295,550, 'center');
         doc.text(290 ,650, this.state.alumno.nombre+" "+this.state.alumno.apellidoPaterno+" "+this.state.alumno.apellidoMaterno, 'center');

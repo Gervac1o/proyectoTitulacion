@@ -62,8 +62,10 @@ class PdfLiberacionAlumno extends React.Component{
         doc.setFontSize(12);
 
         doc.text(this.state.text, 50,320 , {maxWidth: 500, align: "justify"});
-        doc.text(this.state.text2, 50,380 , {maxWidth: 500, align: "justify"});
-        doc.text("Sin otro en particular, aprovecho para mandar un cordial saludo.", 50, 460 , {maxWidth: 500, align: "justify"});
+        doc.text("Solicito de la manera mas atenta su autorización para tramitar la liberación extemporánea posterior a tres años de haber registrado mi servicio social por motivos personales, el cual se llevó a cabo con el prestatario: "
+        + this.props.prestatario + ", en el programa: " +this.props.programaSS + ", durante el periodo del " + this.props.fechaInicio + " al " + this.props.fechaTermino + ", con número de registro: " + this.props.registroSS + ". Con base en la siguiente documentación presentada.", 50,380 , {maxWidth: 500, align: "justify"});
+        //doc.text(this.state.text2, 50,380 , {maxWidth: 500, align: "justify"});
+        doc.text("Sin otro en particular, aprovecho para mandar un cordial saludo.", 50, 480 , {maxWidth: 500, align: "justify"});
 
         doc.text("ATENTAMENTE", 295,550, 'center');
         doc.text(290 ,650, this.state.alumno.nombre+" "+this.state.alumno.apellidoPaterno+" "+this.state.alumno.apellidoMaterno, 'center');
