@@ -69,7 +69,7 @@ class PdfBajaAlumno extends React.Component{
         doc.setFontSize(12);
 
         doc.text(this.state.text, 50,320 , {maxWidth: 500, align: "justify"});
-        doc.text("Solicito de la manera mas atenta su autorización para tramitar la " + this.props.tipoDeBaja + " ("+ this.props.horas +" Horas) " +
+        doc.text("Solicito de la manera mas atenta su autorización para tramitar la " + this.props.baja + " ("+ this.props.horas +" Horas) " +
         "de mi servicio social por motivos personales, el cual se lleva a cabo con el prestatario: " + this.props.prestatario + ", en el programa: " + this.props.programaSS + ", durante el periodo del " +
         this.props.fechaInicio + " al " + this.props.fechaTermino + ", con número de registro: " + this.props.registroSS + ".", 50,380 , {maxWidth: 500, align: "justify"});
         //doc.text(this.state.text2, 50,380 , {maxWidth: 500, align: "justify"});
