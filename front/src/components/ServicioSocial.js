@@ -29,7 +29,8 @@ class ServicioSocial extends React.Component {
             semestre:"SEPTIMO", 
         },
 
-        status:"false"
+        status:"false",
+        estado: null
 
     };
 
@@ -43,6 +44,20 @@ class ServicioSocial extends React.Component {
             this.setState({
                 servicio: res.data,
                 //estado: res.data.idServicio,
+            });
+        })
+        .then(res =>{
+            this.setState({
+                estado: this.state.servicio.estado,
+                servicio: {
+                    semestre: null,
+                    responsableDirecto: null,
+                    estado: "NUEVO",
+                    fechaRegistro: null,
+                    revisado: null,
+                    idAlumno: null,
+                    idServicio: null
+                }
             });
         })
        
@@ -97,7 +112,25 @@ class ServicioSocial extends React.Component {
                                     </select>
                             </div>
                             <br/>
-                            <button className="btn" onClick = {this.saveServicio}>Solicitar Constancia de Creditos</button>
+                            {(() => {
+                                switch(this.state.estado){
+                                    case "NUEVO":
+                                    return (
+                                        <button className="btn" onClick = {this.saveServicio}>Solicitar Constancia de Creditos</button>
+                                    );
+                                    case undefined:
+                                    return (
+                                        <button className="btn" onClick = {this.saveServicio}>Solicitar Constancia de Creditos</button>
+                                    );
+                                    case null:
+                                    return (
+                                        <button className="btn" onClick = {this.saveServicio}>Solicitar Constancia de Creditos</button>
+                                    );
+                                    default:
+                                        break;
+                                }
+                            })()}
+                           {/* <button className="btn" onClick = {this.saveServicio}>Solicitar Constancia de Creditos</button>*/}
                           </div>
                           <SubirServicio/>
                           <VerDatosServicio/>
