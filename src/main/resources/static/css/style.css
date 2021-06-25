@@ -2,17 +2,25 @@
 
 .login-page {
     width: 400px;
-    padding: 7% 0 0;
+    padding: 2% 0 0;
     margin: auto;
 }
-
+.header{
+    color: #FFFFFF;
+    text-align: center;
+    opacity: 0.7;
+    border-radius: 100px;
+}
 .form {
+    height: auto;
     position: relative;
     z-index: 1;
-    background: #FFFFFF;
+    background: #ffffffc9;
     max-width: 360px;
     margin: 0 auto 100px;
-    padding: 45px;
+    margin-top: 50px;
+    border-radius: 30px;
+    padding: 40px;
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
@@ -23,7 +31,7 @@
     background: #f2f2f2;
     width: 100%;
     border: 0;
-    margin: 0 0 15px;
+    margin: 0 0 20px;
     padding: 15px;
     box-sizing: border-box;
     font-size: 14px;
@@ -103,23 +111,37 @@
 }
 
 body {
-
+	
     background: linear-gradient(to left, rgba(235, 255, 243, 1), rgba(232, 232, 232, 1), rgba(255, 233, 233, 1));
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+        background-image: url('esimez.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover; 
+    
 }
 
 #logo2 {
-    width: 43%;
+    width: 40%;
+    margin-left: -27px;
+    margin-bottom: 40px;
+    float: left;
+    
+    
 }
 
 .text-logo {
-    margin-top: 4px;
-    font-size: 20px;
+    display: block;
+    margin-top: -170px;
+    margin-left: 95px;
+    font-size: 23px;
     color: maroon;
-    float: left;
+    float: right;
     font-weight: bold;
+    text-align: left;
 
 }
 .error {

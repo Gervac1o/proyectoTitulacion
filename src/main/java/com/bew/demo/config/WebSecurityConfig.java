@@ -28,7 +28,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/favicon.ico")
                 .antMatchers("/css/style.css")
                 .antMatchers("/js/login.js")
-                .antMatchers("/ipn.png");
+                .antMatchers("/ipn2.png")
+        		.antMatchers("/css/esimez.jpg");
     }
 
     private static final org.apache.logging.log4j.Logger LOG = org.apache.logging.log4j.LogManager.getLogger(WebSecurityConfig.class);
