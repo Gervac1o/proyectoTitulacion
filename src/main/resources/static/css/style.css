@@ -1,9 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+
 .login-page {
     width: 400px;
     padding: 2% 0 0;
-    margin: auto;
+    margin-left: 800px;
+    margin-top: -30px;
+    filter: none;
+}
+.login-page2 {
+    width: 700px;
+    padding: 2%;
+    margin-left: 50px;
+    margin-top: -623px;
+    filter: none;
 }
 .header{
     color: #FFFFFF;
@@ -13,18 +23,31 @@
 }
 .form {
     height: auto;
-    position: relative;
-    z-index: 1;
-    background: #ffffffc9;
+   
+    
+    background: #ffffffee;
     max-width: 360px;
-    margin: 0 auto 100px;
+    margin:auto;
     margin-top: 50px;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 40px;
     text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 0 20px 0 rgba(44, 44, 44, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);   
 }
 
+.form2{
+   
+    height: 465px;
+    background: #2c2c2cea;
+    max-width: 700px;
+    margin: 0 auto 100px;
+    margin-top: 50px;
+    border-radius: 5px;
+    padding: 40px;
+    text-align: left;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    
+}
 .form input {
     font-family: "Roboto", sans-serif;
     outline: 0;
@@ -107,8 +130,10 @@
 }
 
 .container .info span .fa {
-    color: #EF3B3A;
+    color: #9c2727;
 }
+
+
 
 body {
 	
@@ -116,18 +141,21 @@ body {
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image:url("esimez2.jpg");
+    background-size: cover;
 
-        background-image: url('esimez.jpg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover; 
     
 }
 
+
+
 #logo2 {
-    width: 40%;
-    margin-left: -27px;
-    margin-bottom: 40px;
+    width: 47%;
+    margin-top: -10px;
+    margin-left: 80px;
+    margin-bottom: 20px;
     float: left;
     
     
@@ -135,14 +163,18 @@ body {
 
 .text-logo {
     display: block;
-    margin-top: -170px;
-    margin-left: 95px;
+    margin-top: -20px;
+    margin-left: 0px;
     font-size: 23px;
-    color: maroon;
+    color: rgb(117, 23, 64);
     float: right;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
 
+}
+#text-info{
+    color:rgb(226, 226, 226);
+    font-size: 25px;
 }
 .error {
     color: #FF1C19;

@@ -29,6 +29,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/css/style.css")
                 .antMatchers("/js/login.js")
                 .antMatchers("/ipn2.png")
+                .antMatchers("/css/esimez2.jpg")
         		.antMatchers("/css/esimez.jpg");
     }
 
