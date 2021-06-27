@@ -29,7 +29,8 @@ class SubirServicio extends React.Component {
 
     fileChange = (event) => {
         this.setState({
-             file: event.target.files[0]
+             file: event.target.files[0],
+             statusArchivo:true
          });
     }
 
@@ -52,7 +53,7 @@ class SubirServicio extends React.Component {
     }
 
     upLoad = () => {
-        if(this.state.file && this.state.file != null && this.state.file != undefined){
+        if(this.state.statusArchivo != null && this.state.file != undefined){
             const fd = new FormData();
             console.log(this.state);
             fd.append('file', this.state.file, this.state.file.name)
@@ -73,7 +74,7 @@ class SubirServicio extends React.Component {
         }else{
             this.setState(
                 {
-                    statusArchivo: "false"
+                    statusArchivo: false
                 }
             );
         }//Fin de else file
@@ -113,7 +114,7 @@ class SubirServicio extends React.Component {
                                     </tbody>
                                     )}
                                     <br/>
-                                        <a className="text_login">Subir Archivo</a>
+                                    <br/>
                                     <div  >
                                   <label for="file" id = "input-size"  >{this.state.file.name}</label>
                                     <input type="file" name = "file" id = "file"  onChange={this.fileChange} />
@@ -124,7 +125,7 @@ class SubirServicio extends React.Component {
   
                                     {(() => {
                                     switch(this.state.statusArchivo){   
-                                        case "false":
+                                        case false:
                                         return (
                                         <a className="warning">¡Seleccione un Archivo para Registrar!</a>
                                         );
@@ -146,7 +147,7 @@ class SubirServicio extends React.Component {
                             <div>
                                 <strong>Aun no hay archivos guardados</strong>
                                 <br/>
-                                <a className="text_login">Subir Archivo</a>
+                                <br/>
                                 <div  >
                                  <label for="file" id = "input-size"  >{this.state.file.name}</label>
                                     <input type="file" name = "file" id = "file"  onChange={this.fileChange} />
@@ -154,7 +155,7 @@ class SubirServicio extends React.Component {
 
                                 {(() => {
                                     switch(this.state.statusArchivo){   
-                                        case "false":
+                                        case false:
                                         return (
                                         <a className="warning">¡Seleccione un Archivo para Registrar!</a>
                                         );
@@ -181,7 +182,7 @@ class SubirServicio extends React.Component {
                                </div>
                                 {(() => {
                                     switch(this.state.statusArchivo){   
-                                        case "false":
+                                        case false:
                                         return (
                                         <a className="warning">¡Seleccione un Archivo para Registrar!</a>
                                         );

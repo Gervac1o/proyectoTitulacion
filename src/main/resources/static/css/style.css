@@ -1,29 +1,60 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+
 .login-page {
     width: 400px;
-    padding: 7% 0 0;
-    margin: auto;
+    padding: 2% 0 0;
+    margin-left: 800px;
+    margin-top: -30px;
+    filter: none;
 }
-
-.form {
-    position: relative;
-    z-index: 1;
-    background: #FFFFFF;
-    max-width: 360px;
-    margin: 0 auto 100px;
-    padding: 45px;
+.login-page2 {
+    width: 700px;
+    padding: 2%;
+    margin-left: 50px;
+    margin-top: -623px;
+    filter: none;
+}
+.header{
+    color: #FFFFFF;
     text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    opacity: 0.7;
+    border-radius: 5px;
+}
+.form {
+    height: auto;
+   
+    
+    background: #ffffffee;
+    max-width: 360px;
+    margin:auto;
+    margin-top: 50px;
+    border-radius: 5px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(44, 44, 44, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);   
 }
 
+.form2{
+   
+    height: 465px;
+    background: #2c2c2cea;
+    max-width: 700px;
+    margin: 0 auto 100px;
+    margin-top: 50px;
+    border-radius: 5px;
+    padding: 40px;
+    text-align: left;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    
+}
 .form input {
     font-family: "Roboto", sans-serif;
     outline: 0;
     background: #f2f2f2;
     width: 100%;
     border: 0;
-    margin: 0 0 15px;
+    margin: 0 0 20px;
     padding: 15px;
     box-sizing: border-box;
     font-size: 14px;
@@ -99,28 +130,51 @@
 }
 
 .container .info span .fa {
-    color: #EF3B3A;
+    color: #9c2727;
 }
 
-body {
 
+
+body {
+	
     background: linear-gradient(to left, rgba(235, 255, 243, 1), rgba(232, 232, 232, 1), rgba(255, 233, 233, 1));
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image:url("esimez2.jpg");
+    background-size: cover;
+
+    
 }
 
+
+
 #logo2 {
-    width: 43%;
+    width: 47%;
+    margin-top: -10px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    float: left;
+    
+    
 }
 
 .text-logo {
-    margin-top: 4px;
-    font-size: 20px;
-    color: maroon;
-    float: left;
+    display: block;
+    margin-top: -20px;
+    margin-left: 0px;
+    font-size: 23px;
+    color: rgb(117, 23, 64);
+    float: right;
     font-weight: bold;
+    text-align: center;
 
+}
+#text-info{
+    color:rgb(226, 226, 226);
+    font-size: 25px;
 }
 .error {
     color: #FF1C19;

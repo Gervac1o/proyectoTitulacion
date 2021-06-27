@@ -122,7 +122,7 @@ class Baja extends React.Component {
 
     saveBaja = (e) => {
         this.changeState();
-        alert("VALOR DEL ID ALUMNO DENTRO OBJETO" + this.state.baja.idAlumno)
+        
         if(this.state.baja.registroSS && this.state.baja.registroSS != null && this.state.baja.registroSS != undefined){
             if(this.state.baja.programaSS && this.state.baja.programaSS != null && this.state.baja.programaSS != undefined){
                 if(this.state.baja.prestatario && this.state.baja.prestatario != null && this.state.baja.prestatario != undefined){
