@@ -190,7 +190,6 @@ input:not(:placeholder-shown):invalid {
 }
 
 .link{
-    /*text-decoration: none;*/
     color: rgb(226, 226, 226);
 }
 
