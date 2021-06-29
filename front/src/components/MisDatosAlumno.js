@@ -6,6 +6,7 @@ import DirectorioAlumno from './DirectorioAlumno';
 import Cookies from 'universal-cookie';
 import DatosActualizadosAlumno from './DatosActualizadosAlumno';
 import DatosActualizadosEmail from './DatosActualizadosEmail';
+import ValidacionAlumno from './ValidacionAlumno';
 
 const cookies = new Cookies();
 
@@ -45,7 +46,7 @@ class MisDatosAlumno extends React.Component {
                 cookies.set('nombre', this.state.alumno.nombre, {path: "/"})
             })
             .catch(err => {
-                // window.location.reload(false);
+                
             })
     }//Fin de funcion getAlumno()
 
@@ -68,9 +69,11 @@ class MisDatosAlumno extends React.Component {
 
     render() {
         return (
+
             <div className="center">
                 <HeaderDEyAE/>
                 <DirectorioAlumno/>
+               
 
                 <tbody>
                 <tr>
@@ -100,19 +103,24 @@ class MisDatosAlumno extends React.Component {
                     </tr>
                     <tr>
                         <td className="table_lista">
-                            <button className="btn" id="btn-table" onClick={this.updateEmail}>cambiar CONTRASEÑA
+                            <button className="btn" id="btn-table" onClick={this.updateEmail}>Cambiar Contraseña
                             </button>
                         </td>
                     </tr>
                 </tr>
                 </tbody>
+                
                 {(() => {
                     switch (this.state.actualizar) {
                         case "DATOS":
                             return (
                                 <div>
                                     <DatosActualizadosAlumno
-                                        cancel={this.cancel}/>
+                                        cancel={this.cancel}
+                                        statusBoleta={null}
+                                        clase="datosAlumno"
+                                        statusBtnCancel= "true"
+                                        />
                                 </div>
                             );
                             break;
@@ -124,10 +132,10 @@ class MisDatosAlumno extends React.Component {
                                         redirect="MisDatosAlumno"
                                         tipoUsuario="false"
                                         clase="datosAlumno"
+                                       
                                     />
                                 </div>
                             );
-                            break;
                         default:
                             break;
                     }

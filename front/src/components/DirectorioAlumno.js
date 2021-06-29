@@ -53,7 +53,7 @@ class DirectorioAlumno extends Component{
                         <th className="table"><Link to='/user/CrearLiberacion' className = "active">Liberacion Extemporanea</Link></th>
                         <th className="table"> <Link to='/user/CrearBaja' className = "active">Baja de Servicio Social</Link></th>
                         <th className="table"><Link to='/user/CrearServicio' className = "active">Pre Servicio Social</Link></th>
-{/**FALTA PONER CONTEXTO USER <th className="table"><Link to='/MisDatosAlumno' className = "active">Cuenta</Link></th>*/}
+
                        
                     <th className="table" >
                         <div >

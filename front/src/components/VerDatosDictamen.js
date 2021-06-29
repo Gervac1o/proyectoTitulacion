@@ -39,7 +39,7 @@ class VerDatosDictamen extends React.Component{
             return(
                 <div className="center">
                         <div id="sidebar" className="dictamenCenter">
-                            
+                        <strong>Estado de Trámite: </strong>
                         {(() => {  
                         switch (this.state.dictamen.estado){
                         case "NUEVO":
