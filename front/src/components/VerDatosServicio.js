@@ -37,6 +37,7 @@ class VerDatosServicio extends React.Component{
                 return(
                     <div className="center">
                             <div id="sidebar" className="servicioCenter">
+                            <strong>Estado de Trámite: </strong>
                                 {(() => {  
                                 switch (this.state.servicio.estado){
                                 case "NUEVO":

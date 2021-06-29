@@ -37,7 +37,7 @@ import BuscarICE from './components/BuscarICE';
 import BuscarICA from './components/BuscarICA';
 import BuscarIE from './components/BuscarIE';
 import BuscarISISA from './components/BuscarISISA';
-
+import ValidacionAlumno from './components/ValidacionAlumno';
 import DirectorioArchivosAlumno from './components/DirectorioArchivosAlumno';
 import BuscarBoleta from './components/BuscarBoleta';
 import BuscarDictamenAlumnos from './components/BuscarDictamenAlumnos';
@@ -100,7 +100,7 @@ ReactDOM.render(
                 <Route exact path="/doc/PdfServicio/:doc" component={PdfServicio}/>
 
                 {/**esta ruta lleva a llenar un frmulario de nuevo usuario */}
-
+                <Route exact path="/user/ValidacionAlumno" component={ValidacionAlumno}/>
                 <Route component={Error}/>
                 
 

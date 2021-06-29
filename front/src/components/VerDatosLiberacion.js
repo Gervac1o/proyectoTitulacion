@@ -35,6 +35,7 @@ class VerDatosLiberacion extends React.Component{
                 return(
                     <div className="center">
                             <div id="sidebar" className="liberacionCenter">
+                            <strong>Estado de Trámite: </strong>
                                 {(() => {  
                                 switch (this.state.liberacionExtemporanea.estado){
                                 case "NUEVO":

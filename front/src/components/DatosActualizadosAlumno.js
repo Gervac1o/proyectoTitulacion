@@ -27,7 +27,8 @@ class DatosActualizadosAlumno extends React.Component {
         idUsuario: cookies.get('idUsuario'),
         idAlumno: cookies.get('idAlumno'),
         statusNombre: null,
-        statusBoleta: null,
+        statusBoleta: this.props.statusBoleta, 
+        statusBtnCancel: this.props.statusBtnCancel,    
         statusApellidoPaterno: null,
         statusApellidoMaterno: null,
         status: "null",
@@ -111,7 +112,7 @@ class DatosActualizadosAlumno extends React.Component {
 
         return (
             <div className="center">
-                <div id="sidebar" className="datosAlumno">
+                <div id="sidebar" className={this.props.clase}>
                 <br/>
                 <strong>Actualizar información personal </strong>
                     <div>
@@ -163,16 +164,19 @@ class DatosActualizadosAlumno extends React.Component {
                         })()}
                     </div>
                     <div>
-                        <label htmlFor="boleta" className="text_login">Boleta</label>
-                        <input type="text" className="input_login" name="boleta" ref={this.boletaRef}
-                               placeholder="Número de Boleta" onChange={this.changeState}/>
+
                         {(() => {
                             switch (this.state.statusBoleta) {
                                 case "false":
                                     return (
-                                        <a className="warning">¡Ingresa tu boleta con solo números (10)!</a>
+                                        <div>
+                                        <label htmlFor="boleta" className="text_login">Boleta</label>
+                                        <input type="text" className="input_login" name="boleta" ref={this.boletaRef}
+                                               placeholder="Número de Boleta" onChange={this.changeState}/>
+                                        <a className="warning">¡Ingresa tu boleta con solo 10 números!</a>
+                                        </div>
                                     );
-                                    break;
+                                    
                                 default:
                                     break;
                             }
@@ -213,7 +217,17 @@ class DatosActualizadosAlumno extends React.Component {
                     </div>
                     <br/>
                     <button className="btn" onClick={this.saveAlumno}>Aceptar</button>
-                    <button  className ="btnCancel" onClick={cancel} >Cancelar</button>
+                    {(() => {
+                        switch (this.state.statusBtnCancel) {
+                            case "true" :
+                                return (
+                                     <button  className ="btnCancel" onClick={cancel} >Cancelar</button>
+                                );
+                            default:
+                                break;
+                        }
+                    })()}
+                   
                 </div>
             </div>
         );

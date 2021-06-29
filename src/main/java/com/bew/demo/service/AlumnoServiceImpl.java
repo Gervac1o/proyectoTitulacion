@@ -64,17 +64,19 @@ public class AlumnoServiceImpl implements AlumnoService {
     }
 
     @Override
-    public AlumnoDTO findByIdUsuario(Long idUsuario) {
+    public AlumnoDTO findByIdUsuario(Long idUsuario)  {
         AlumnoDTO alumnoDTO = new AlumnoDTO();
         Alumno alumno = null;
-        try {
+       try {
             alumno = alumnoRepository.findByIdUsuario(idUsuario).orElseThrow(() -> new EmptyResultException("Sin Resultados"));
             Mapper mapper = DozerBeanMapperBuilder.buildDefault();
             alumnoDTO = (mapper.map(alumno, AlumnoDTO.class));
-        } catch (EmptyResultException e) {
-            logger.info("alumno no encontrado");
-        }
 
+       }catch (EmptyResultException e) {
+       	logger.info("holaaa");
+        logger.info("alumno no encontrado alterando el log " );
+    }
+       
         return alumnoDTO;
     }
 
