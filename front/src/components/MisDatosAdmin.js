@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
-
 import DirectorioAdmin from './DirectorioAdmin';
-import Slider from './Slider';
 import Cookies from 'universal-cookie';
 import DatosActualizadosAdmin from './DatosActualizadosAdmin';
 import DatosActualizadosEmail from './DatosActualizadosEmail';
@@ -11,7 +8,7 @@ import RecuperacionContraseña from './RecuperacionContraseña';
 
 const cookies = new Cookies();
 
-class MisDatosAdmin extends React.Component{
+class MisDatosAdmin extends Component{
 
 
 
@@ -71,9 +68,9 @@ class MisDatosAdmin extends React.Component{
                
                     <tbody >
                         <tr >
-                            <th className="table_lista">Nombre</th>
-                            <th className="table_lista">Telefono</th>
-                            <th className="table_lista">Correo</th>
+                            <th className="table_lista, table_title">Nombre</th>
+                            <th className="table_lista, table_title">Telefono</th>
+                            <th className="table_lista, table_title">Correo</th>
                         </tr>
                     </tbody>
                     <tbody>

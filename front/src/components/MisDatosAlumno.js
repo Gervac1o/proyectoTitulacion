@@ -1,16 +1,14 @@
 import React, {Component} from 'react';
-import {Link, Redirect} from 'react-router-dom';
 import HeaderDEyAE from './HeaderDEyAE';
 import axios from 'axios';
 import DirectorioAlumno from './DirectorioAlumno';
 import Cookies from 'universal-cookie';
 import DatosActualizadosAlumno from './DatosActualizadosAlumno';
 import DatosActualizadosEmail from './DatosActualizadosEmail';
-import ValidacionAlumno from './ValidacionAlumno';
 
 const cookies = new Cookies();
 
-class MisDatosAlumno extends React.Component {
+class MisDatosAlumno extends Component {
 
 
     state = {
@@ -77,10 +75,10 @@ class MisDatosAlumno extends React.Component {
 
                 <tbody>
                 <tr>
-                    <th className="table_lista">Nombre</th>
-                    <th className="table_lista">Boleta</th>
-                    <th className="table_lista">Programa Academico</th>
-                    <th className="table_lista">Correo</th>
+                    <th className="table_lista, table_title">Nombre</th>
+                    <th className="table_lista, table_title">Boleta</th>
+                    <th className="table_lista, table_title">Programa Académico</th>
+                    <th className="table_lista, table_title">Correo</th>
                 </tr>
                 </tbody>
                 <tbody>

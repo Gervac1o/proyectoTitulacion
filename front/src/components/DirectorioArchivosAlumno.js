@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link, Switch } from 'react-router-dom';
 import DirectorioAdmin from './DirectorioAdmin';
 import Cookies from 'universal-cookie';
 import AdminBajaArchivos from './AdminBajaArchivos';
@@ -90,15 +89,15 @@ class DirectorioArchivosAlumno extends Component {
                 <tbody>
                     <tr >
                         <th className="table_lista"> </th>
-                        <th className="table_lista">Alumno</th>
-                        <th className="table_lista">Boleta</th>
-                        <th className="table_lista">Programa Academico</th>
+                        <th className="table_lista, table_title">Alumno</th>
+                        <th className="table_lista, table_title">Boleta</th>
+                        <th className="table_lista, table_title">Programa Académico</th>
 
                     </tr>
                 </tbody>
                 <tbody>
                     <tr>
-                        <td className="table_lista">TRÁMITE</td>
+                        <td className="table_lista, table_title">TRÁMITE</td>
                         <td className="table_lista">{this.state.alumno.apellidoPaterno} {this.state.alumno.apellidoMaterno} {this.state.alumno.nombre}</td>
                         <td className="table_lista">{this.state.alumno.boleta}</td>
                         <td className="table_lista">{this.state.alumno.programaAcademico}</td>
