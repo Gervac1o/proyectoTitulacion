@@ -1,10 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-
 import DirectorioAdmin from './DirectorioAdmin';
 import { Link } from 'react-router-dom';
-import { Alert } from 'bootstrap';
-import RecuperacionContraseña from './RecuperacionContraseña';
 
 class BuscarBoleta extends React.Component {
 
@@ -27,7 +24,7 @@ class BuscarBoleta extends React.Component {
 
     searchBoleta = (e) => {
         this.changeState();
-        if(this.boletaRef.current.value && this.boletaRef.current.value != null && this.boletaRef.current.value != undefined)
+        if(this.boletaRef.current.value && this.boletaRef.current.value !== null && this.boletaRef.current.value !== undefined)
         {
             axios.get("alumno/findBoleta/" + this.state.boleta)
             .then(res => {
@@ -54,7 +51,7 @@ class BuscarBoleta extends React.Component {
 
     render() {
 
-        if(this.state.status == 'success'){
+        if(this.state.status === 'success'){
             return (
                 <div className="center">
                     <DirectorioAdmin />
@@ -78,9 +75,9 @@ class BuscarBoleta extends React.Component {
                            <br/><br/>
                                     <tbody >
                                         <tr >
-                                            <th className="table_lista">Alumno</th>
-                                            <th className="table_lista">Boleta</th>
-                                            <th className="table_lista">Programa Academico</th>
+                                            <th className="table_lista, table_title">Alumno</th>
+                                            <th className="table_lista, table_title">Boleta</th>
+                                            <th className="table_lista, table_title">Programa Académico</th>
                                         </tr>
                                     </tbody>
                                     <tbody>

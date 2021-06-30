@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect,Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 import BorrarDoc from './BorrarDoc';
@@ -174,7 +174,7 @@ class AdminLiberacionArchivos extends React.Component {
     }
 
     upLoad = () => {
-        if(this.state.file && this.state.file != null && this.state.file != undefined){
+        if(this.state.file && this.state.file !== null && this.state.file !== undefined){
             const fd = new FormData();
             console.log(this.state);
             fd.append('file', this.state.file, this.state.file.name)
@@ -295,8 +295,8 @@ class AdminLiberacionArchivos extends React.Component {
                                    
                                     <tbody>
                                         <tr>
-                                            <td className="table_lista"><strong>Documentos</strong></td>
-                                            <td className="table_lista"><strong>Comentario</strong></td>
+                                            <td className="table_lista, table_title"><strong>Documentos</strong></td>
+                                            <td className="table_lista, table_title"><strong>Comentario</strong></td>
                                         </tr>
                                     </tbody>
                                     {this.state.listar.map((lista1, i) =>

@@ -1,7 +1,4 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import Slider from './Slider';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
 
@@ -40,9 +37,9 @@ class DatosActualizadosAdmin extends React.Component {
 
     saveAdmin = async (e) => {
         this.changeState();
-        if(this.state.admin.nombre && this.state.admin.nombre != null && this.state.admin.nombre != undefined){
-            if(this.state.admin.apellidos && this.state.admin.apellidos != null && this.state.admin.apellidos != undefined){
-                if(this.state.admin.telefono && this.state.admin.telefono != null && this.state.admin.telefono != undefined){
+        if(this.state.admin.nombre && this.state.admin.nombre !== null && this.state.admin.nombre !== undefined){
+            if(this.state.admin.apellidos && this.state.admin.apellidos !== null && this.state.admin.apellidos !== undefined){
+                if(this.state.admin.telefono && this.state.admin.telefono !== null && this.state.admin.telefono !== undefined){
                         await axios.patch("admin/update", this.state.admin)
                         .then(res => {
                             this.setState({

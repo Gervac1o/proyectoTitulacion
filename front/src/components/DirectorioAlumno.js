@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import logo from'../assets/images/user.png';
-import {BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
@@ -14,7 +14,6 @@ class DirectorioAlumno extends Component{
 	state = {
         email: cookies.get('email'),
         tipoUsuario: cookies.get('tipoUsuario'),
-        tipoUsuario: cookies.get('tipoUsuario'),  
         nombre:"null"
     }
     componentWillMount=()=>{
